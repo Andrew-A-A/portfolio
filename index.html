@@ -3,16 +3,464 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Andrew Saba - Software Engineer</title>
-  <meta name="description" content="Software engineer building high-performance backend systems and native Android apps. Available for freelance and contracts." />
+  <title>Andrew Saba — Software Engineer</title>
+  <meta name="description" content="Andrew Saba, software engineer in Cairo. Backend systems on Node.js, SAP CAP and PostgreSQL, and Android apps in Kotlin." />
+  <meta name="theme-color" content="#ECEBE5" />
+  <link rel="icon" type="image/png" href="assets/favico.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
-    <link rel="icon" type="image/x-icon" href="assets/favico.png">
+  <script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
-  <div id="app"></div>
+  <div class="loader" aria-hidden="true">
+    <div class="loader-word"><span>Andrew</span><span>Saba</span></div>
+  </div>
+
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="nav">
+    <a class="nav-brand" href="#top">Andrew Saba</a>
+    <nav class="nav-links" aria-label="Sections">
+      <a href="#experience">Experience</a>
+      <a href="#work">Projects</a>
+      <a href="#open-source">Open source</a>
+      <a href="#about">About</a>
+    </nav>
+    <a class="pill pill-ink nav-cta" href="#contact">Let's talk</a>
+  </header>
+
+  <main id="main">
+    <!-- Hero -->
+    <section class="hero" id="top">
+      <p class="hero-top">
+        <span>Software engineer</span>
+        <span>Cairo, Egypt — open to remote</span>
+        <span class="status"><i></i>Available for work</span>
+      </p>
+      <h1 class="hero-name" aria-label="Andrew Saba">
+        <span class="row"><span class="ch">A</span><span class="ch">n</span><span class="ch">d</span><span class="ch">r</span><span class="ch">e</span><span class="ch">w</span></span>
+        <span class="row row-2"><span class="ch">S</span><span class="ch">a</span><span class="ch">b</span><span class="ch">a</span><span class="ch dot">.</span></span>
+      </h1>
+      <div class="hero-foot">
+        <p class="hero-intro">I build backend systems that hold up on payroll day, and Android apps people install. Right now that's Nabd Suite, an HR and payroll platform on SAP BTP, at RAPTORS.</p>
+        <div class="hero-actions">
+          <a class="pill pill-violet" href="mailto:andrew.adel.a@outlook.com">Email me</a>
+          <a class="pill" href="assets/Andrew_Saba_CV.pdf" target="_blank" rel="noopener">Download CV</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Scroll-scrubbed statement -->
+    <section class="statement" aria-label="What I do">
+      <div class="statement-sticky">
+        <p class="statement-text" data-scrub>A payroll run for 2,000 employees took 80 minutes, then timed out. I took it from 46 database statements per employee down to 17 and moved it into crash-safe background jobs. Finding the slow part and making it boring is the work I like best.</p>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section class="section" id="experience">
+      <div class="sec-head">
+        <h2 class="sec-title">Experience</h2>
+        <p class="sec-note">Software Engineer at RAPTORS Tech, an SAP Gold Partner in Cairo. Feb 2025 to now.</p>
+      </div>
+
+      <div class="list">
+        <article class="item">
+          <button class="item-head" aria-expanded="false">
+            <span class="item-name">Nabd Suite</span>
+            <span class="item-what">HR and payroll platform on SAP BTP</span>
+            <span class="item-meta">2025 – now</span>
+            <span class="plus" aria-hidden="true"></span>
+          </button>
+          <div class="item-body"><div class="item-inner">
+            <div class="cols">
+              <p class="lede">Nabd started as one app holding Core and Pay. When Nabd Care arrived, I helped split it into one microservice per module, so Core, Pay and Care deploy and scale on their own, now as dedicated per-customer deployments.</p>
+              <ul class="facts">
+                <li><b>Payroll run.</b> A 2,000-employee run took 80 minutes and timed out. Cut statements per employee from 46 to 17 and moved cohort runs to crash-safe background jobs.</li>
+                <li><b>Payroll features.</b> Loans (disbursement, recovery, early settlement, final pay), an End-of-Service ledger, a WYSIWYG Payslip Studio, and bank salary files for CIB, HSBC, QNB and Crédit Agricole.</li>
+                <li><b>Nabd Care.</b> Notification and email engine with time-zone delivery, digests and retries; rotation-based ticket routing; surveys with PDF and Excel export; rule-based Populations on SuccessFactors attributes.</li>
+                <li><b>Security and Arabic.</b> Authorization rebuilt on fine-grained action keys mapped to XSUAA scopes, full Arabic/RTL across UI, records and email, and an encrypted CSV export/import.</li>
+                <li><b>Testing and AI.</b> Jest and Selenium suites across the platform, and Nabd Buddy, an HR assistant on a provider-agnostic LLM layer.</li>
+              </ul>
+            </div>
+            <p class="stack">SAP CAP · Node.js · React · PostgreSQL · SAP BTP</p>
+          </div></div>
+        </article>
+
+        <article class="item">
+          <button class="item-head" aria-expanded="false">
+            <span class="item-name">Tamayoz</span>
+            <span class="item-what">Clearance management add-on</span>
+            <span class="item-meta">2025</span>
+            <span class="plus" aria-hidden="true"></span>
+          </button>
+          <div class="item-body"><div class="item-inner">
+            <div class="cols">
+              <p class="lede">A configurable app that cut the employee clearance process by 70%, from the SuccessFactors data fetch to the final certificate.</p>
+              <ul class="facts">
+                <li><b>Approval engine.</b> Parallel, sequential and hybrid flows, with each level split across several departments.</li>
+                <li><b>SuccessFactors.</b> OData services that read and update employee and clearance records in Employee Central in real time.</li>
+                <li><b>Per-client look.</b> Branding and themes through a configurable SAPUI5 layer.</li>
+              </ul>
+            </div>
+            <p class="stack">SAP CAP · Node.js · PostgreSQL · SAPUI5</p>
+          </div></div>
+        </article>
+
+        <article class="item">
+          <button class="item-head" aria-expanded="false">
+            <span class="item-name">Payroll Engine</span>
+            <span class="item-what">Calculation engine add-on</span>
+            <span class="item-meta">2025</span>
+            <span class="plus" aria-hidden="true"></span>
+          </button>
+          <div class="item-body"><div class="item-inner">
+            <div class="cols">
+              <p class="lede">Rebuilt the calculation engine from a linear model into a recursive dependency graph, with in-memory caching in place of repeated database round trips.</p>
+              <ul class="facts">
+                <li><b>Tax engine.</b> Time-dependent, fully configurable personal tax slabs with automatic annual reconciliation.</li>
+                <li><b>Off-cycle payroll.</b> On-demand payment runs filtered by reason code and payment type, with PDF and Excel reports.</li>
+              </ul>
+            </div>
+            <p class="stack">SAP CAP · React · PostgreSQL · Node.js</p>
+          </div></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="section" id="work">
+      <div class="sec-head">
+        <h2 class="sec-title">Projects</h2>
+        <p class="sec-note">Apps and tools I've built on my own or for clients. Open one to see the screens.</p>
+      </div>
+
+      <div class="list list-work" data-hover-preview>
+        <article class="item" data-preview="assets/shots/mockation-1.webp">
+          <button class="item-head" aria-expanded="false">
+            <span class="item-name">Mockation</span>
+            <span class="item-what">Mock GPS location for Android, live on Google Play</span>
+            <span class="item-meta">2026</span>
+            <span class="plus" aria-hidden="true"></span>
+          </button>
+          <div class="item-body"><div class="item-inner">
+            <div class="shots">
+              <img src="assets/shots/mockation-1.webp" alt="Mockation home screen with an active mock and countdown" loading="lazy" width="540" height="1170" />
+              <img src="assets/shots/mockation-2.webp" alt="Saved places list in dark theme" loading="lazy" width="540" height="1170" />
+              <img src="assets/shots/mockation-3.webp" alt="Pasting a Google Maps link to pick a place" loading="lazy" width="540" height="1170" />
+              <img src="assets/shots/mockation-4.webp" alt="Auto-stop timer picker" loading="lazy" width="540" height="1170" />
+              <img src="assets/shots/mockation-5.webp" alt="Adding a saved place in dark theme" loading="lazy" width="540" height="1170" />
+              <img src="assets/shots/mockation-6.webp" alt="Settings screen" loading="lazy" width="540" height="1170" />
+            </div>
+            <div class="cols">
+              <p class="lede">I needed to test geofences on a real phone without walking around the block, and every mock-location app I tried was ad-heavy or awkward. So I built one and took it through the whole Play Store process myself.</p>
+              <ul class="facts">
+                <li>Drop a pin or paste a Google Maps link, press Start, and every app on the device sees that spot.</li>
+                <li>Auto-stop timers, saved places with tags, home-screen widgets, GPS drift simulation and crash recovery.</li>
+                <li>Closed testing, policy review, listing and localization handled solo, with a CI/CD pipeline for hotfixes.</li>
+              </ul>
+            </div>
+            <p class="stack">Kotlin · Jetpack Compose · Material 3 · Coroutines</p>
+            <p class="links"><a href="https://play.google.com/store/apps/details?id=com.andrewsaba.mockation" target="_blank" rel="noopener">Google Play</a><a href="https://github.com/Andrew-A-A/MOLOCATION" target="_blank" rel="noopener">Source</a></p>
+          </div></div>
+        </article>
+
+        <article class="item" data-preview="assets/shots/clipmix-1.webp">
+          <button class="item-head" aria-expanded="false">
+            <span class="item-name">ClipMix</span>
+            <span class="item-what">Turns a folder of clips into one vertical montage</span>
+            <span class="item-meta">2026</span>
+            <span class="plus" aria-hidden="true"></span>
+          </button>
+          <div class="item-body"><div class="item-inner">
+            <div class="shots">
+              <img src="assets/shots/clipmix-1.webp" alt="ClipMix projects list with saved recipes" loading="lazy" width="540" height="1200" />
+              <img src="assets/shots/clipmix-2.webp" alt="Mix editor with clips, recipes and export button" loading="lazy" width="540" height="1100" />
+              <img src="assets/shots/clipmix-3.webp" alt="Exported montages ready to share" loading="lazy" width="540" height="1100" />
+              <img src="assets/shots/clipmix-4.webp" alt="Settings for ratio, quality and duration target" loading="lazy" width="540" height="1100" />
+            </div>
+            <div class="cols">
+              <p class="lede">Point it at a folder, pull a batch of videos, reorder them, add a caption and a track, and render one MP4. Everything runs on the device through hardware codecs: no backend, no account, no upload.</p>
+              <ul class="facts">
+                <li>Beat detection reads the track's tempo so cuts can land every 1, 2, 4 or 8 beats.</li>
+                <li>9:16, 1:1 or 16:9 up to 1080p, H.264 and AAC, with an optional 15, 30 or 60 second target.</li>
+                <li>Renders keep going when you leave the app, with progress in the notification shade.</li>
+              </ul>
+            </div>
+            <p class="stack">Kotlin · Media3 · MediaCodec · Storage Access Framework</p>
+            <p class="links"><a href="https://github.com/Andrew-A-A/ClipMix" target="_blank" rel="noopener">Source</a></p>
+          </div></div>
+        </article>
+
+        <article class="item" data-preview="assets/shots/crux-1.webp">
+          <button class="item-head" aria-expanded="false">
+            <span class="item-name">CRUX</span>
+            <span class="item-what">Four-player cross chess over local Wi-Fi</span>
+            <span class="item-meta">2026</span>
+            <span class="plus" aria-hidden="true"></span>
+          </button>
+          <div class="item-body"><div class="item-inner">
+            <div class="shots">
+              <img src="assets/shots/crux-1.webp" alt="Four-player game on the cross-shaped board" loading="lazy" width="540" height="1200" />
+              <img src="assets/shots/crux-2.webp" alt="Home screen with game modes and Fog of War" loading="lazy" width="540" height="1200" />
+              <img src="assets/shots/crux-3.webp" alt="New game setup for four players" loading="lazy" width="540" height="1200" />
+              <img src="assets/shots/crux-4.webp" alt="Local room with a four-letter code, waiting for players" loading="lazy" width="540" height="1200" />
+              <img src="assets/shots/crux-5.webp" alt="How to play: four kingdoms, one cross" loading="lazy" width="540" height="1200" />
+            </div>
+            <div class="cols">
+              <p class="lede">Four kingdoms hold one arm each of a cross-shaped board. No checkmate: capture a king and that kingdom leaves the board. Last king standing wins.</p>
+              <ul class="facts">
+                <li>Fog of war on every board: you see your own army and whatever wanders into your light.</li>
+                <li>Rooms announced over mDNS, play over a plain TCP socket. No server, no accounts; empty seats go to bots.</li>
+                <li>Board geometry and rules in pure Kotlin, separate from the Android UI.</li>
+              </ul>
+            </div>
+            <p class="stack">Kotlin · Jetpack Compose · mDNS · TCP sockets</p>
+            <p class="links"><a href="https://github.com/Andrew-A-A/CRUX" target="_blank" rel="noopener">Source</a></p>
+          </div></div>
+        </article>
+
+        <article class="item" data-preview="assets/shots/geonotes-1.webp">
+          <button class="item-head" aria-expanded="false">
+            <span class="item-name">Geofenced Notes</span>
+            <span class="item-what">Notes that wait for you at a place</span>
+            <span class="item-meta">2026</span>
+            <span class="plus" aria-hidden="true"></span>
+          </button>
+          <div class="item-body"><div class="item-inner">
+            <div class="shots">
+              <img src="assets/shots/geonotes-1.webp" alt="Notes list with categories and armed fences" loading="lazy" width="540" height="1100" />
+              <img src="assets/shots/geonotes-2.webp" alt="A reminder notification firing on leaving home, with a snooze action" loading="lazy" width="540" height="1100" />
+              <img src="assets/shots/geonotes-3.webp" alt="Note editor with place, trigger and radius" loading="lazy" width="540" height="1100" />
+              <img src="assets/shots/geonotes-4.webp" alt="Settings with default radius and trigger" loading="lazy" width="540" height="1100" />
+            </div>
+            <div class="cols">
+              <p class="lede">Attach a note to a place and a radius, and it fires when you arrive or when you leave.</p>
+              <ul class="facts">
+                <li>Map tab with every fence drawn as a circle, built on OpenStreetMap through osmdroid.</li>
+                <li>Pick a place by pin, coordinates or a pasted Google Maps link.</li>
+                <li>Snooze straight from the notification, and fences re-armed after a reboot.</li>
+              </ul>
+            </div>
+            <p class="stack">Kotlin · Jetpack Compose · Geofencing API · osmdroid</p>
+            <p class="links"><a href="https://github.com/Andrew-A-A/Geofenced-Notes" target="_blank" rel="noopener">Source</a></p>
+          </div></div>
+        </article>
+
+        <article class="item" data-preview="assets/shots/logoadder-1.webp">
+          <button class="item-head" aria-expanded="false">
+            <span class="item-name">Logo Adder</span>
+            <span class="item-what">Batch watermarks for photos and videos</span>
+            <span class="item-meta">2026</span>
+            <span class="plus" aria-hidden="true"></span>
+          </button>
+          <div class="item-body"><div class="item-inner">
+            <div class="shots">
+              <img src="assets/shots/logoadder-1.webp" alt="Photo editor with position grid, size and opacity" loading="lazy" width="540" height="1200" />
+              <img src="assets/shots/logoadder-2.webp" alt="Create screen for adding photos" loading="lazy" width="540" height="1200" />
+              <img src="assets/shots/logoadder-3.webp" alt="Logo library with a text watermark option" loading="lazy" width="540" height="1200" />
+            </div>
+            <div class="cols">
+              <p class="lede">One watermark setup applied to up to 20 photos at once, or burned into video with Media3 Transformer.</p>
+              <ul class="facts">
+                <li>Place the mark on a 3×3 grid or drag it anywhere, with size and opacity sliders.</li>
+                <li>Four motion styles for video, previewed live before export.</li>
+                <li>No storage permission on Android 10 and up: the photo picker and MediaStore do the work.</li>
+              </ul>
+            </div>
+            <p class="stack">Kotlin · Jetpack Compose · Media3 Transformer</p>
+            <p class="links"><a href="https://github.com/Andrew-A-A/Logo-Adder" target="_blank" rel="noopener">Source</a></p>
+          </div></div>
+        </article>
+
+        <article class="item" data-preview="assets/shots/ifix-4.webp">
+          <button class="item-head" aria-expanded="false">
+            <span class="item-name">IFix</span>
+            <span class="item-what">Finds a nearby technician for a broken appliance</span>
+            <span class="item-meta">Client</span>
+            <span class="plus" aria-hidden="true"></span>
+          </button>
+          <div class="item-body"><div class="item-inner">
+            <div class="shots">
+              <img src="assets/shots/ifix-1.webp" alt="IFix welcome screen" loading="lazy" width="540" height="1200" />
+              <img src="assets/shots/ifix-2.webp" alt="Language picker with six languages" loading="lazy" width="540" height="1200" />
+              <img src="assets/shots/ifix-3.webp" alt="Phone number login" loading="lazy" width="540" height="1200" />
+              <img src="assets/shots/ifix-4.webp" alt="Service categories" loading="lazy" width="540" height="1200" />
+              <img src="assets/shots/ifix-5.webp" alt="Map of nearby technicians" loading="lazy" width="540" height="1200" />
+              <img src="assets/shots/ifix-6.webp" alt="Technician profile with rating and contact buttons" loading="lazy" width="540" height="1200" />
+            </div>
+            <div class="cols">
+              <p class="lede">A Flutter app that connects people with maintenance technicians nearby: pick the appliance, see who's close on a live map, call or share your location on WhatsApp.</p>
+              <ul class="facts">
+                <li>Six languages including Arabic and Urdu, with full right-to-left layouts.</li>
+                <li>Phone-number sign-in and verified technician profiles with ratings.</li>
+              </ul>
+            </div>
+            <p class="stack">Flutter · Dart · Google Maps · Phone auth</p>
+          </div></div>
+        </article>
+
+        <article class="item" data-preview="assets/shots/binge-1.webp">
+          <button class="item-head" aria-expanded="false">
+            <span class="item-name">Binge Better</span>
+            <span class="item-what">Screen-time limits, a year of freelance on Upwork</span>
+            <span class="item-meta">2023 – 24</span>
+            <span class="plus" aria-hidden="true"></span>
+          </button>
+          <div class="item-body"><div class="item-inner">
+            <div class="shots">
+              <img src="assets/shots/binge-1.webp" alt="Binge Better home screen" loading="lazy" width="380" height="833" />
+              <img src="assets/shots/binge-2.webp" alt="Block list" loading="lazy" width="380" height="833" />
+              <img src="assets/shots/binge-3.webp" alt="Blocking conditions" loading="lazy" width="380" height="833" />
+              <img src="assets/shots/binge-4.webp" alt="Deactivation settings" loading="lazy" width="380" height="833" />
+              <img src="assets/shots/binge-5.webp" alt="Blocked app screen" loading="lazy" width="380" height="833" />
+              <img src="assets/shots/binge-6.webp" alt="Settings" loading="lazy" width="380" height="833" />
+            </div>
+            <div class="cols">
+              <p class="lede">Twelve months building and maintaining a native Android app for one client: device- and schedule-based app locking driven by real usage data.</p>
+              <ul class="facts">
+                <li>Usage Stats APIs feed the restriction engine with live screen-time data.</li>
+                <li>Kept working across major Android releases without regressions.</li>
+              </ul>
+            </div>
+            <p class="stack">Java · Android SDK · Usage Stats API</p>
+          </div></div>
+        </article>
+
+        <article class="item" data-preview="assets/shots/contentguard.webp">
+          <button class="item-head" aria-expanded="false">
+            <span class="item-name">Content Guard</span>
+            <span class="item-what">Blurs violent content as you browse</span>
+            <span class="item-meta">2024</span>
+            <span class="plus" aria-hidden="true"></span>
+          </button>
+          <div class="item-body"><div class="item-inner">
+            <div class="shots shots-wide">
+              <video src="assets/content-guard.mp4" poster="assets/shots/contentguard.webp" muted loop playsinline preload="none" aria-label="Content Guard blurring flagged images on a web page"></video>
+            </div>
+            <div class="cols">
+              <p class="lede">My graduation project at Ain Shams. I led the classifier, which reached 98% accuracy on the test set, after curating and merging large datasets so it held up across kinds of content.</p>
+              <ul class="facts">
+                <li>A Flask API serves the model in real time.</li>
+                <li>A Chrome extension blurs or blocks flagged content with no change to the site itself.</li>
+              </ul>
+            </div>
+            <p class="stack">Python · Flask · JavaScript · Chrome Extensions</p>
+            <p class="links"><a href="https://github.com/Andrew-A-A/Content_Filter_chrome_Extenstion" target="_blank" rel="noopener">Extension</a><a href="https://github.com/Andrew-A-A/Content_Filter_Extension_Backend" target="_blank" rel="noopener">API</a></p>
+          </div></div>
+        </article>
+
+        <article class="item" data-preview="assets/shots/loc-3.webp">
+          <button class="item-head" aria-expanded="false">
+            <span class="item-name">Location Reminder</span>
+            <span class="item-what">Udacity capstone, reminders that trigger by place</span>
+            <span class="item-meta">2022</span>
+            <span class="plus" aria-hidden="true"></span>
+          </button>
+          <div class="item-body"><div class="item-inner">
+            <div class="shots">
+              <img src="assets/shots/loc-1.webp" alt="Welcome screen" loading="lazy" width="540" height="1170" />
+              <img src="assets/shots/loc-2.webp" alt="Login screen" loading="lazy" width="540" height="1170" />
+              <img src="assets/shots/loc-3.webp" alt="Reminder list" loading="lazy" width="540" height="1170" />
+              <img src="assets/shots/loc-4.webp" alt="New reminder form" loading="lazy" width="540" height="1170" />
+              <img src="assets/shots/loc-5.webp" alt="Picking a location on the map" loading="lazy" width="540" height="1170" />
+            </div>
+            <div class="cols">
+              <p class="lede">The capstone of the Advanced Android Kotlin nanodegree: set a reminder on the map and get notified when you enter the area.</p>
+              <ul class="facts">
+                <li>Geofencing API with radius tuned for battery life.</li>
+                <li>MVVM with Room and LiveData, covered by tests.</li>
+              </ul>
+            </div>
+            <p class="stack">Kotlin · MVVM · Room · Google Maps</p>
+            <p class="links"><a href="https://github.com/Andrew-A-A/Location_Reminder" target="_blank" rel="noopener">Source</a></p>
+          </div></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Open source -->
+    <section class="section" id="open-source">
+      <div class="sec-head">
+        <h2 class="sec-title">Open source</h2>
+        <p class="sec-note">Contributions to other people's projects, and packages I've published.</p>
+      </div>
+      <div class="oss">
+        <a class="oss-card" href="https://github.com/DuarteSantos8/openGym" target="_blank" rel="noopener">
+          <span class="oss-name">openGym</span>
+          <span class="oss-sub">Workout tracker, 20k+ stars</span>
+          <span class="oss-text">Barcode check-in: my gym's card uses barcodes, not QR, so I wrote a reader and renderer for Code 128, Code 39, EAN and UPC from scratch, with tests and 19 translations (#854, merged). Then the running workout as a single Android notification with Android 16 Live Updates (#874, shipped in the next release).</span>
+          <span class="oss-meta">Oct – Nov 2026</span>
+        </a>
+        <a class="oss-card" href="https://github.com/Andrew-A-A/mtxpg" target="_blank" rel="noopener">
+          <span class="oss-name">mtxpg</span>
+          <span class="oss-sub">Multitenancy for SAP CAP on PostgreSQL</span>
+          <span class="oss-text">The PostgreSQL counterpart to @sap/cds-mtxs. Each tenant gets its own schema, and every query is routed by setting search_path on the active transaction. A missing tenant fails closed instead of writing to shared tables.</span>
+          <span class="oss-meta">2026</span>
+        </a>
+        <a class="oss-card" href="https://github.com/Andrew-A-A/cds-test-architect" target="_blank" rel="noopener">
+          <span class="oss-name">cds-test-architect</span>
+          <span class="oss-sub">Claude Code skill for CAP testing</span>
+          <span class="oss-text">Writes idiomatic cds.test() backend tests: OData CRUD, custom actions, error responses and log capture, against a real Postgres with no mocks.</span>
+          <span class="oss-meta">2026</span>
+        </a>
+        <a class="oss-card" href="https://github.com/payroll-engine/PayrollEngine.WebApp" target="_blank" rel="noopener">
+          <span class="oss-name">Payroll Engine</span>
+          <span class="oss-sub">.NET / Blazor payroll platform</span>
+          <span class="oss-text">Validated and corrected the web app's Arabic localization and fixed English UI typos (#3, merged).</span>
+          <span class="oss-meta">May 2026</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="section about" id="about">
+      <div class="sec-head">
+        <h2 class="sec-title">About</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-text">
+          <p class="about-lead">Two-plus years shipping production software. Most days I'm in Node.js and PostgreSQL on SAP BTP; evenings and weekends I build Android apps in Kotlin and send pull requests to open-source projects I use.</p>
+          <p>I studied Computer Science at Ain Shams University, finished Udacity's Advanced Android Kotlin nanodegree along the way, and speak Arabic natively and English professionally. I use Claude Code daily, including to push hotfixes to production from my phone.</p>
+        </div>
+        <dl class="about-list">
+          <div><dt>Backend</dt><dd>Node.js, SAP CAP (CDS), OData, REST, Flask, microservices</dd></div>
+          <div><dt>Data</dt><dd>PostgreSQL, query optimization, in-memory caching</dd></div>
+          <div><dt>Frontend</dt><dd>React, TanStack Query, SAPUI5, HTML, CSS</dd></div>
+          <div><dt>Mobile</dt><dd>Kotlin, Jetpack Compose, Java, Android SDK, Flutter</dd></div>
+          <div><dt>Testing</dt><dd>Jest, Selenium, cds.test</dd></div>
+          <div><dt>Recognition</dt><dd>Vision Enforcer Award, RAPTORS, Feb 2026</dd></div>
+          <div><dt>Certificates</dt><dd>Claude Code in Action, Anthropic, 2026 · Advanced Android Kotlin, Udacity, 2022</dd></div>
+          <div><dt>Education</dt><dd>BSc Computer Science, Ain Shams University, 2020 – 2024</dd></div>
+        </dl>
+      </div>
+    </section>
+  </main>
+
+  <!-- Contact -->
+  <footer class="contact" id="contact">
+    <p class="contact-kicker">Have a backend that needs to be faster, or an Android app to build?</p>
+    <a class="contact-big" href="mailto:andrew.adel.a@outlook.com">Let's talk.</a>
+    <div class="contact-row">
+      <button class="contact-email" type="button" data-copy="andrew.adel.a@outlook.com">
+        <span class="label">andrew.adel.a@outlook.com</span>
+        <span class="hint" aria-live="polite">Copy</span>
+      </button>
+      <nav class="contact-links" aria-label="Elsewhere">
+        <a href="https://www.linkedin.com/in/andrew-adela/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/Andrew-A-A" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://play.google.com/store/apps/details?id=com.andrewsaba.mockation" target="_blank" rel="noopener">Google Play</a>
+        <a href="assets/Andrew_Saba_CV.pdf" target="_blank" rel="noopener">CV</a>
+      </nav>
+    </div>
+    <p class="contact-foot"><span>© 2026 Andrew Saba</span><span>Cairo, Egypt</span></p>
+  </footer>
+
+  <div class="preview" aria-hidden="true"><img alt="" /></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js" defer></script>
   <script src="script.js" defer></script>
 </body>
 </html>
