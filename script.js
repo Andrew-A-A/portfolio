@@ -42,11 +42,14 @@
 
   // ── nav: solid after hero top, hide on scroll down ────────────────────
   const nav = document.querySelector('.nav');
-  let lastY = 0;
+  let lastY = window.scrollY;
   onScroll(() => {
     const y = window.scrollY;
     nav.classList.toggle('is-solid', y > 40);
-    nav.classList.toggle('is-hidden', y > window.innerHeight * 0.6 && y > lastY);
+    if (y < window.innerHeight * 0.6) { nav.classList.remove('is-hidden'); lastY = y; return; }
+    // smooth-scroll settles with zero or sub-pixel steps; only react to a real move
+    if (Math.abs(y - lastY) < 8) return;
+    nav.classList.toggle('is-hidden', y > lastY);
     lastY = y;
   });
 

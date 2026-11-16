@@ -138,7 +138,7 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
 .is-loaded .hero-foot { opacity: 1; transform: none; transition: opacity 900ms 900ms, transform 900ms 900ms var(--ease); }
 
 /* ── statement (scroll scrub) ────────────────────────────────────────── */
-.statement { height: 260vh; position: relative; }
+.statement { height: 200vh; position: relative; }
 .statement-sticky { position: sticky; top: 0; height: 100svh; display: flex; align-items: center; padding: 0 var(--gutter); }
 .statement-text {
   margin: 0; max-width: 22ch;
@@ -298,7 +298,7 @@ a.oss-card:hover .oss-name { color: var(--violet); }
   .hero-name { font-size: 25vw; }
   .hero-actions { width: 100%; }
   .hero-actions .pill { flex: 1; }
-  .statement { height: 220vh; }
+  .statement { height: 180vh; }
   .about-list div { grid-template-columns: minmax(0, 1fr); gap: 2px; }
   .contact-foot { flex-direction: column; gap: 4px; }
 }
